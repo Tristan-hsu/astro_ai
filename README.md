@@ -9,11 +9,11 @@ pinned: false
 ---
 
 
-[![Build](https://github.com/astro_ai/RAG-LLM/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR_GH_ID>/RAG-LLM/actions)   ← ② GitHub Actions Badge
+[![Build](https://github.com/astro_ai/RAG-LLM/actions/workflows/ci.yml/badge.svg)](https://github.com/TristanHsu/astro_ai/actions)   ← ② GitHub Actions Badge
 [![HF Spaces](https://img.shields.io/badge/HF%20Spaces-online-success?logo=huggingface)](https://huggingface.co/spaces/TristanHsu/astro_ai)   ← ③ HF Space Badge
 
 ## ✨ Online Demo                ← ④ Demo 區塊標題
-https://huggingface.co/spaces/<HF_USER>/rag-llm   ← ⑤ Demo 連結
+https://huggingface.co/spaces/TristanHsu/astro_ai  ← ⑤ Demo 連結
 
 ## ⚡ Quick Start (local)        ← ⑥ 本地快速啟動教學
 ```bash
