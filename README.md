@@ -1,3 +1,30 @@
+---
+title: ai astrologist
+emoji: ⭐
+colorFrom: gray
+colorTo: blue
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
+
+[![Build](https://github.com/astro_ai/RAG-LLM/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR_GH_ID>/RAG-LLM/actions)   ← ② GitHub Actions Badge
+[![HF Spaces](https://img.shields.io/badge/HF%20Spaces-online-success?logo=huggingface)](https://huggingface.co/spaces/TristanHsu/astro_ai)   ← ③ HF Space Badge
+
+## ✨ Online Demo                ← ④ Demo 區塊標題
+https://huggingface.co/spaces/<HF_USER>/rag-llm   ← ⑤ Demo 連結
+
+## ⚡ Quick Start (local)        ← ⑥ 本地快速啟動教學
+```bash
+git clone https://github.com/Tristan-hsu/astro_ai && cd astro_ai
+pip install -r requirements.txt
+pytest -q
+uvicorn api:app --reload
+```
+
+[![Test → Build → Deploy to HF Space](https://github.com/Tristan-hsu/astro_ai/actions/workflows/main.yml/badge.svg)](https://github.com/Tristan-hsu/astro_ai/actions/workflows/main.yml)
+
 # Astro Engine & Horoscope – Gradio Edition
 
 A small Gradio app that exposes the same functionality as the original FastAPI
