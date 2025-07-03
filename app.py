@@ -27,6 +27,7 @@ def summarize_astrology(
 demo = gr.Interface(
     summarize_astrology,
     [
+        gr.Markdown("## 請輸入以下資訊，就可以算出關於你出生的星座描述！"),
         gr.Textbox(
             label="Date & Time (ISO‑8601)",
             value=dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
