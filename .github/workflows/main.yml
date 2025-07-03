@@ -1,0 +1,37 @@
+name: Test → Build → Deploy to HF Space
+
+on:
+  push:
+    branches: [main]          # 任何 push 到 main 觸發
+  workflow_dispatch:          # 亦可手動執行
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        lfs: true             # 若你有 LFS 檔
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with: { python-version: '3.11' }
+
+    - name: Install & Test
+      run: |
+        pip install -r requirements.txt pytest
+        python -m pytest
+
+    - name: Build Docker image
+      run: docker build -t astro_ai:latest .
+
+    - name: Push to Hugging Face Space
+      env:  
+        HF_TOKEN: ${{ secrets.HF_TOKEN }} 
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name  "github-actions[bot]"
+        git remote add space https://huggingface.co/spaces/TristanHsu/astro_ai || true
+        git push --force https://TristanHsu:$HF_TOKEN@huggingface.co/spaces/TristanHsu/astro_ai HEAD:main

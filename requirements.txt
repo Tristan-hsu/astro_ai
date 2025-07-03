@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pyswisseph        # Swiss Ephemeris C binding
+geopy             # OpenStreetMap Nominatim
+timezonefinder    # 免費時區判定；若有 Google API Key 會自動改走官方服務
+python-dotenv     # 載入 .env 內的 GOOGLE_TZ_API_KEY
+pytz
+python-dateutil
+requests
+openai
+langchain
+gradio
+rich
+websockets
