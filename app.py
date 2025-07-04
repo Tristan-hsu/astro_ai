@@ -14,6 +14,7 @@ def summarize_astrology(
     provider: str,
     api_key: str,
     model_id: str,
+    *args
 ) -> str:
     """Generate a Chinese horoscope summary for the given parameters."""
     try:
@@ -38,6 +39,7 @@ demo = gr.Interface(
         ),
         gr.Textbox(label="API-key", type="password", placeholder="API-key"),
         gr.Textbox(label="Model", value="gpt-4o-mini"),
+        gr.Markdown("## 請輸入以上資訊，就可以算出關於你出生的星座描述！")
     ],
     gr.Textbox(label="Ephemeris"),
     title="Horoscope Astro Engine",
